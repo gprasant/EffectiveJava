@@ -53,7 +53,7 @@ public class BuilderNutritionFacts {
     }
 //
 //    Use the above builder pattern as :
-//    public static void Main(String[] args) {
+//    public static void main(String[] args) {
 //        BuilderNutritionFacts nf = new Builder(100, 1)
 //                .setCalories(100)
 //                .setFat(10)
