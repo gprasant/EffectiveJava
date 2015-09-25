@@ -39,6 +39,10 @@ public class PhoneNumber {
         this.line = (short) line;
     }
 
+    public short getAreaCode() { return areaCode; }
+    public short getPrefix() { return prefix; }
+    public short getLine() { return line; }
+
     private void rangeCheck(int arg, int max, String name) {
         if (arg < 0 || arg > max)
             throw new IllegalArgumentException(name + ": " + arg);
@@ -70,6 +74,10 @@ public class PhoneNumber {
         return result;
     }
 
+    @Override public String toString() {
+        return String.format("(%03d) %03d-%04d", areaCode, prefix, line);
+    }
+
     public static void main(String[] args) {
         // PhoneNumber does not have hashCode overridden
         PhoneNumber pn1 = new PhoneNumber(650, 123, 1234);
@@ -81,5 +89,6 @@ public class PhoneNumber {
         System.out.println("res : " + res);   // null
         System.out.println("pn1.hashCode() :" + pn1.hashCode()); //1020371697
         System.out.println("pn2.hashCode() :" + pn2.hashCode()); //789451787
+        System.out.println("pn1 : " + pn1);
     }
 }
