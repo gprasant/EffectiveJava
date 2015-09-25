@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 /*
     Item 9: Always override hashCode when you override equals
+    Item10: Always override toString
 
     Rules to follow while overriding HashCode()
     1. For the same object, hashCode() should return the same integer if the value fields do not change.
