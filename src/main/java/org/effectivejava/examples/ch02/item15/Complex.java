@@ -1,5 +1,6 @@
 package org.effectivejava.examples.ch02.item15;
 
+// Item 15: reduce mutability in classes
 public final class Complex {
     private final double re;
     private final double im;
